@@ -1,3 +1,5 @@
+process.LoadEnvFile('.env');
+
 const required = ['STUDENT_NAME', 'CLASSROOM'];
 
 const absent = required.filter((name)=>!process.env[name]?.trim());
