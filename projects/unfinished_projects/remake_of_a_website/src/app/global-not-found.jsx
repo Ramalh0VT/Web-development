@@ -1,4 +1,4 @@
-import NfDeco from "../components/404_deco.jsx";
+import NfDeco from "./components/404_deco.jsx";
 
 export default function NotFound() {
 	return (
