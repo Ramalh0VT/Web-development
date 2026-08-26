@@ -1,4 +1,4 @@
 
 # Description  
 
-I will start using this repository after 2 billion years without using it XD. It still won't be immediatly used but i'm already laying the groundwork.
+You can find web development code made with a variety of different things, such as JavaScript, React, Node, CSS, HTML, you know the drill
