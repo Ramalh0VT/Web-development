@@ -67,6 +67,7 @@ const news = [
 	return(
 		<>
 			<h1>News around the world</h1>
+
 			{news.map(n => {
 				return (
 					<Ncard
