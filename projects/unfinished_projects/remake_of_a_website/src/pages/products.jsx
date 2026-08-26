@@ -1,4 +1,5 @@
-import pcard from "@/components/card"
+import Pcard from "@/components/card"
+import "../app/globals.css"
 export default function products(){
 const products = [
 	{
@@ -27,7 +28,7 @@ const products = [
 		<>
 			<h1>Page for products listing</h1>
 			{products.map(product => {
-				return <pcard
+				return <Pcard
 				key = {product.id}
 						titulo = {product.name}
 				desc = {product.desc}
