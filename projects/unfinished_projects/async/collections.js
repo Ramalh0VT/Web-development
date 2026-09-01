@@ -18,3 +18,7 @@ const products = [
 		category:'Hardware'
 	}
 ]
+
+const names = produtos.map(({name}) =>name);
+
+console.log(names);
