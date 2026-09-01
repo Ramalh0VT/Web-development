@@ -1,7 +1,7 @@
 const configFile = process.argv[2];
 let loadedConfig = true;
 
-if (!configFile) {
+if (configFile) {
     console.error("Configuration file not provided");
     process.exitCode = 1;
     loadedConfig = false;
