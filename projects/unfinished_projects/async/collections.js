@@ -22,3 +22,9 @@ const products = [
 const names = products.map(({name}) =>name);
 
 console.log(names);
+
+const peripherals = products.filter(
+	({ category }) => category === 'Peripherals'
+);
+
+console.log(peripherals);
