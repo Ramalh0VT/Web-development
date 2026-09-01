@@ -28,3 +28,7 @@ const peripherals = products.filter(
 );
 
 console.log(peripherals);
+
+const monitor = products.find(({id}) => id === 2);
+
+console.log(monitor);
