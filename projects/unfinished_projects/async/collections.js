@@ -1,0 +1,20 @@
+const products = [
+	{
+		id:1,
+		name:'Keyboard',
+		price: 40,
+		category:'Peripherals'
+	}
+	{
+		id:2,
+		name:'Monitor',
+		price: 400,
+		category:'Peripherals'
+	}
+	{
+		id:1,
+		name:'Intel 4004',
+		price: 400,
+		category:'Hardware'
+	}
+]
