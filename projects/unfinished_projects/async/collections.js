@@ -33,4 +33,6 @@ const monitor = products.find(({id}) => id === 2);
 
 console.log(monitor);
 
-const readjust = products.filter(({category})=> category === 'Peripherals').map((products)=>({...products, price: products.price * 1.4 }));
+const readjustment = products.filter(({category})=> category === 'Peripherals').map((products)=>({...products, price: products.price * 1.4 }));
+
+console.log(readjustment)
