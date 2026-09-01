@@ -4,13 +4,13 @@ const products = [
 		name:'Keyboard',
 		price: 40,
 		category:'Peripherals'
-	}
+	},
 	{
 		id:2,
 		name:'Monitor',
 		price: 400,
 		category:'Peripherals'
-	}
+	},
 	{
 		id:1,
 		name:'Intel 4004',
@@ -19,6 +19,6 @@ const products = [
 	}
 ]
 
-const names = produtos.map(({name}) =>name);
+const names = products.map(({name}) =>name);
 
 console.log(names);
