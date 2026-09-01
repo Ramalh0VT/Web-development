@@ -10,3 +10,17 @@ function queryProduct(id){
 
 queryProduct(1).then((product)=>console.log('Sucess: ',product))
 .catch((error)=>console.error('Error:', error.message))
+
+async function exec(id){
+	try {
+		const product = await
+		queryProduct(id);
+		console.log('Sucess: ', product);
+	}
+	catch (error){
+		console.error('Error:', error.message);
+		process.exitCode = 1;
+	}
+}
+
+exec(1)
