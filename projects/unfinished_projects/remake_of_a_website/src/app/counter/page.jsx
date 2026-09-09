@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function counter(){
 	return(
 		<>
@@ -5,7 +7,7 @@ export default function counter(){
 			<p>Value: <i>{count_val}</i></p>
 			<div>
 				<button type="button"> + </button>				
-				<button type="button"> + </button>
+				<button type="button"> - </button>
 			</div>
 		</>
 	)
