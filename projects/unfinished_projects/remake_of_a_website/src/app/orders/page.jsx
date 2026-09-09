@@ -18,7 +18,9 @@ export default function Orders(){
 			setError("Fill in all fields!");
 			return;
 		}
-		setError("");
+		else if (desc.length > 100 || desc.length < 15){
+			setError("The description length should be in a range of 15 to 100 characters!")
+		}
 
 
 	const newOrder = {
@@ -50,6 +52,13 @@ export default function Orders(){
 		</div>		
 			</form>
 			<h1>{error}</h1>
+			<table>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</table>
 		</main>
 	)
 }
