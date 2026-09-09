@@ -1,12 +1,12 @@
 "use client"
 import { useState } from "react"
 
-export default function orders(){
-	const [orders_var, setOrder] = useState([]);
+export default function Orders(){
+	const [ordens, setOrders] = useState([]);
 	
 
 	const [client, setClient] = useState("");
-	const [equipment, SetEquipment] = useState("");
+	const [equipment, setEquipment] = useState("");
 	const [desc, setDesc] = useState("");
 
 	const [error, setError] = useState("");
@@ -19,7 +19,7 @@ export default function orders(){
 			return;
 		}
 		setError("");
-	}
+
 
 	const newOrder = {
 		id: Date.now(),
@@ -28,21 +28,26 @@ export default function orders(){
 		desc:desc.trim(),
 		status:"open"
 	}
-	setOrders([...orders_var, newOrder])
+	
+	setOrders([...ordens, newOrder])
 	setClient("")
 	setEquipment("")
 	setDesc("")
 	setError("")
+	}
+	
+	console.log(ordens)
 	return(
 		<main>
 			<h1>Service orders</h1>
-			<form>
+			<form onSubmit={submitOrde}>
 				<div>
 					<label htmlFor="client"></label>
-			<input type="text" name="client" id="client" value="{client}" placeholder="Client's name" onChange={(event) => setClient(event.target.value)}>	
-			<input type="text" name="equipment" id="equipment" value="{equipment}" placeholder="E.g. laptop" onChange={(event) => setEquipment(event.target.value)}>	
-			<input type="text" name="desc" id="desc" value="{desc}" placeholder="Description" onChange={(event) => setDesc(event.target.value)}>	
-			</div>		
+			<input type="text" name="client" id="client" value={client} placeholder="Client's name" onChange={(event) => setClient(event.target.value)}/>	
+			<input type="text" name="equipment" id="equipment" value={equipment} placeholder="E.g. laptop" onChange={(event) => setEquipment(event.target.value)}/>	
+			<input type="text" name="desc" id="desc" value={desc} placeholder="Description" onChange={(event) => setDesc(event.target.value)}/>
+			<button type="submit"> Submit </button>
+		</div>		
 			</form>
 			<h1>{error}</h1>
 		</main>
