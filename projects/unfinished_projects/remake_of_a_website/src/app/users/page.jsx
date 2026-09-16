@@ -10,10 +10,12 @@ export default function users(){
 		fetch("https://randomuser.me/api/?results=10")
 		.then(res => res.json())
 		.then(info => {
-			console.log(info)
-			setUsers(info)
+			console.log(info);
+			setUsers(info);
+			setError("");
 		})
-	}, [] )
+		.catch(error => setError(error.message))
+	}, [] );
 	return (
 		<>
 			<h1>Users list</h1>	
