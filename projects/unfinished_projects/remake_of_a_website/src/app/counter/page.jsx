@@ -25,7 +25,7 @@ export default function counter(){
 		setWarn(null)
 	}
 
-	useEffect( () => {}, [] );
+	useEffect( () => {console.log(count_val)}, [count_val] );
 
 	return(
 		<>
