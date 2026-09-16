@@ -11,7 +11,7 @@ export default function users(){
 		.then(res => res.json())
 		.then(info => {
 			console.log(info);
-			setUsers(info);
+			setUsers(info.results);
 			setError("");
 		})
 		.catch(error => setError(error.message))
@@ -21,15 +21,21 @@ export default function users(){
 			<h1>Users list</h1>
 			{errorMsg != "" && <p>ERROR: {error}</p>}
 			{usersArray.length > 0 ?
-
 				<div>
-						
+					{usersArray.map((user, idx) =>{
+						return(
+							<div key={idx}>
+								<h3>{user.name.first}{""}{user.name.last}</h3>
+								<img src={user.picture.large} alt="" />
+							</div>
+						);
+					})}
 				</div>
 
 				:
 
-				<div>
-
+				<div>					
+					<p>No users yet :( </p>		
 				</div>
 			}
 		</>
