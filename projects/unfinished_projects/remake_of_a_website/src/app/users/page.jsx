@@ -6,7 +6,14 @@ export default function users(){
 	const [usersArray, setUsers] = useState([]);
 	const [error, setError] = useState("");
 
-	useEffect( () => {}, [] )
+	useEffect( () => {
+		fetch("https://randomuser.me/api/?results=10")
+		.then(res => res.json())
+		.then(info => {
+			console.log(info)
+			setUsers(info)
+		})
+	}, [] )
 	return (
 		<>
 			<h1>Users list</h1>	
