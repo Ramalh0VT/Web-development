@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 export default function users(){
 	const [usersArray, setUsers] = useState([]);
-	const [error, setError] = useState("");
+	const [errorMsg, setError] = useState("");
 
 	useEffect( () => {
 		fetch("https://randomuser.me/api/?results=10")
@@ -18,7 +18,8 @@ export default function users(){
 	}, [] );
 	return (
 		<>
-			<h1>Users list</h1>	
+			<h1>Users list</h1>
+			{errorMsg != "" && <p>ERROR: {error}</p>}
 		</>
 	);
 }
