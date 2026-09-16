@@ -20,6 +20,18 @@ export default function users(){
 		<>
 			<h1>Users list</h1>
 			{errorMsg != "" && <p>ERROR: {error}</p>}
+			{usersArray.length > 0 ?
+
+				<div>
+						
+				</div>
+
+				:
+
+				<div>
+
+				</div>
+			}
 		</>
 	);
 }
