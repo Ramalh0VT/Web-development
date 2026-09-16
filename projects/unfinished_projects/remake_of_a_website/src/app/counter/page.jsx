@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function counter(){
 
@@ -24,6 +24,8 @@ export default function counter(){
 		setVal(count_val - 1);
 		setWarn(null)
 	}
+
+	useEffect( () => {}, [] );
 
 	return(
 		<>
