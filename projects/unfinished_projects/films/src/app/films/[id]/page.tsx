@@ -22,7 +22,7 @@ export default function Film(){
 				<h2>Release date: {film.ano}</h2>
 				<h1><b>DESCRIPTION:</b></h1>
 				<p>{film.sinopse}</p>
-				<img src={film.imagem} width="250" alt="film image"/>
+				<img src={film.imagem} width="700" alt="film image"/>
 				<a href={film.trailer} >Film link</a>
 			</div>
 			}
