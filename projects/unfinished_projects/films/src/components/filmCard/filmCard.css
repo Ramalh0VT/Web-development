@@ -1,0 +1,13 @@
+.film-wrapper{
+	display:flex;
+	flex-direction:column;
+	gap:1em;
+	border-radius:25px;
+	padding:0.65em;
+	background-color:silver;
+}
+
+.film-wrapper img{
+	width:20%;
+	height:auto;
+}
