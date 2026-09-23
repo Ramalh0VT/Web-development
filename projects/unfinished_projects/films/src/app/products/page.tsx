@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 // import "./products.css";
-// import
+// import Productscard from "@/components/Productscard"
 
 export default function Products(){
 	const [productsArray, setProductsArray] = useState([]);
@@ -18,7 +18,25 @@ export default function Products(){
 	},[])
 	return(
 		<>
-			{errorMsg != "" <h1>An error occurred:{errorMsg}</h1>}
+			{errorMsg != "" && <h1>An error occurred:{errorMsg}</h1>}
+			{productsArray.length > 0 
+			
+			?
+
+			<div className="products-container">
+				{productsArray.map(p => {
+					return <Productscard key={p.id} product={p}/>
+				})}
+			</div>
+		
+
+			:
+
+			<div>
+				<h1>No products yet :(</h1>
+			</div>
+
+			}
 		</>
 	)	
 }
