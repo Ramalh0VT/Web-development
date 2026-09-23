@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 // import "./products.css";
-// import Productscard from "@/components/Productscard"
+ import Productscard from "@/components/Productscard"
 
 export default function Products(){
 	const [productsArray, setProductsArray] = useState([]);
@@ -13,7 +13,7 @@ export default function Products(){
 			console.log(info)
 			setProductsArray(info)
 			setErrorMsg("")
-		});
+		})
 		.catch(error => setErrorMsg(error.message))
 	},[])
 	return(
