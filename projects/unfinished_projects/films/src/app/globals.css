@@ -3,7 +3,7 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: white) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -55,9 +55,4 @@ a {
 	
 	width: 80vw;
 	margin: auto;
-}
-
-.films-container img{
-	width: 30%;
-	height:auto;
 }
