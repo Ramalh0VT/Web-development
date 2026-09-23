@@ -1,3 +1,7 @@
+*{
+	font-family: monospace;
+}
+
 .film-wrapper{
 	display:flex;
 	flex-direction:column;
@@ -10,4 +14,5 @@
 .film-wrapper img{
 	width:20%;
 	height:auto;
+	place-self:center;
 }
