@@ -17,13 +17,13 @@ export default function Film(){
 	return(
 		<>
 			{film != null &&
-			<>
+			<div>
 				<h1>Film title: {film.titulo}</h1>
 				<h2>Release date: {film.ano}</h2>
 				<p><b>DESCRIPTION</b>: {film.sinopse}</p>
 				<img src={film.imagem} width="250" alt="film image"/>
 				<a href={film.trailer} >Film link</a>
-			</>
+			</div>
 			}
 		</>
 	)

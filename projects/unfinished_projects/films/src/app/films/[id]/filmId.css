@@ -1,6 +1,15 @@
 *{
 	font-family:monospace;
 	margin-bottom:2em;
+	color:white;
+}
+
+p{
+	font-family:Montserrat;
+}
+
+body, html{
+	background-color:black;
 }
 
 a{
@@ -8,6 +17,9 @@ a{
 }
 
 div{
-	margin-top:300px;
+	margin-top:200px;
+	margin-left:50px;
+	margin-right:50px;
+	border:solid 10px;
 }
 
