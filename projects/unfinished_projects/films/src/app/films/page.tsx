@@ -10,11 +10,13 @@ export default function Films(){
 	return(
 		<>
 			{filmsArray.length > 0 &&
-				<div>
-						
+				<div className="films-container">
+					{filmsArray.map(f => {
+						return <filmCard film={f}/>
+					})}			
 				</div>
 			}
 		</>
-	);
+	)
 }
 
