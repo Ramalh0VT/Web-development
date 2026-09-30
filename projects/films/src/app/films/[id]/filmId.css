@@ -1,0 +1,204 @@
+/* ===== Tokens ===== */
+.film-page {
+  --bg: #12202b;
+  --bg-deep: #0b151d;
+  --surface: #1a2d3b;
+  --text: #ece6d6;
+  --muted: #9fb0b8;
+  --accent: #e8a93c;
+  --accent-ink: #1b1305;
+  --line: #2b4352;
+
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
+    "Times New Roman", serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+
+  min-height: 100vh;
+  padding: clamp(1.25rem, 4vw, 3.5rem);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  font-family: var(--font-body);
+  background:
+    radial-gradient(
+      ellipse 60% 50% at 20% 0%,
+      rgba(232, 169, 60, 0.12),
+      transparent 70%
+    ),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+}
+
+.film-page *,
+.film-page *::before,
+.film-page *::after {
+  box-sizing: border-box;
+}
+
+/* ===== Layout ===== */
+.film {
+  width: 100%;
+  max-width: 68rem;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: start;
+}
+
+/* ===== Poster ===== */
+.film-poster {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow:
+    0 0 0 1px var(--line),
+    0 30px 60px -20px rgba(0, 0, 0, 0.7);
+}
+
+.film-poster img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Info ===== */
+.film-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-block: 0.5rem;
+}
+
+.film-label {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.film-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5.5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.film-info > .film-label {
+  margin-bottom: -1rem;
+}
+
+.film-year {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding-block: 1rem;
+  border-block: 1px solid var(--line);
+}
+
+.film-year-value {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.film-description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.film-description p {
+  margin: 0;
+  max-width: 62ch;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text);
+  opacity: 0.9;
+}
+
+/* ===== Link ===== */
+.film-link {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition:
+    transform 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.film-link:hover {
+  background: #f2b955;
+  transform: translateY(-2px);
+}
+
+.film-link:active {
+  transform: translateY(0);
+}
+
+.film-link:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 3px;
+}
+
+/* ===== Filme não encontrado ===== */
+.film-notfound {
+  max-width: 34rem;
+  padding: 2rem 2.25rem;
+  border-left: 4px solid var(--accent);
+  background: var(--surface);
+  border-radius: 0 6px 6px 0;
+}
+
+.film-notfound h1 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.film-notfound p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+  .film {
+    grid-template-columns: 1fr;
+  }
+
+  .film-poster {
+    max-width: 26rem;
+  }
+
+  .film-link {
+    align-self: stretch;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .film-link {
+    transition: none;
+  }
+
+  .film-link:hover {
+    transform: none;
+  }
+}
